@@ -14,6 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth');
 });
 Route::get('apiData/post', 'ApiDataController@store');
+
+Route::get('/welcome', 'AutocompleteController@index');
+Route::get('/autocomplete/fetch', 'AutocompleteController@fetch')->name('autocomplete.fetch');
+Route::post('/login-check', 'AutocompleteController@loginCheck');
+Route::post('/register', 'AutocompleteController@register');

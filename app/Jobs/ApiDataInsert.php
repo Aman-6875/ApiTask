@@ -56,7 +56,6 @@ class ApiDataInsert implements ShouldQueue
                 'extention'=>$this->input['extention'],
                 'registration_date'=>$this->input['registration_date'],
                 'status'=>$this->input['status']
-
             ];
             $stats = [
                 'mr'=>$this->input['mr'],
